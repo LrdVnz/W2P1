@@ -1,0 +1,45 @@
+body {
+    background-color: gray;
+}
+
+div#image {
+    position: relative;
+    width: 500px;
+    height: 600px;
+    margin: auto;
+
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 3%;
+    z-index: 1;
+}
+
+div#image:hover img{
+    opacity: 40%;
+}
+
+div#image:hover #savebutton {
+    display: block;
+}
+
+
+div#savebutton {
+    display: none; 
+    position: absolute;
+    opacity: 100%;
+    right: 10px;
+    top: 10px;
+    background-color: rgb(147, 20, 20);
+    color: white;
+    border-radius: 30%;
+    width: 80px;
+    height: 50px;
+    line-height: 15px;
+    text-align: center;
+    z-index: 2;
+}
+
