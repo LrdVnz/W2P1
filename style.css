@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: gray;
 }
@@ -7,7 +11,6 @@ div#image {
     width: 500px;
     height: 600px;
     margin: auto;
-
 }
 
 img {
@@ -21,7 +24,6 @@ img {
 div#savebutton {
     visibility: hidden;
     position: absolute;
-    opacity: 100%;
     right: 20px;
     top: 0px;
     background-color: rgb(147, 20, 20);
@@ -32,6 +34,7 @@ div#savebutton {
     line-height: 15px;
     text-align: center;
     z-index: 2;
+    transition: top 0.5s ease;
 }
 
 
@@ -41,9 +44,54 @@ div#image:hover img{
 
 div#image:hover #savebutton {
     visibility: visible;
-    transition: 0.5s;
     top : 20px; 
 }
 
 
+.button-one, .button-two, .button-three  {
+    visibility: hidden;
+    position: absolute;
+    bottom: 0px; 
+    color: black;
+    font-size: 20px; 
+    padding: 10px; 
+    transition: bottom 0.5s ease;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    z-index: 2; 
+}
 
+.button-one {
+ left: 20px; 
+ width: 170px;
+}
+
+.button-two {
+ left: 250px; 
+ width:40px; 
+}
+
+.button-one i, .button-one span {
+ margin: 0px 10px; 
+}
+
+.button-three {
+ right: 20px; 
+ width: 40px;
+}
+
+#link-text {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 80px;
+    text-overflow: ellipsis;
+}
+
+
+div#image:hover .button-one,
+div#image:hover .button-two,
+div#image:hover .button-three {
+    visibility: visible; 
+    bottom:20px;
+}
